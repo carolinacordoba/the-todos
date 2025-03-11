@@ -1,0 +1,42 @@
+@use "variables" as v;
+
+ul {
+  list-style: none;
+  color: v.$primary-color;
+  padding: 0px;
+
+  li {
+    p.checked {
+      text-decoration: line-through;
+      color: v.$primary-color;
+      opacity: 0.3;
+    }
+
+    input[type="checkbox"] {
+      accent-color: v.$primary-color;
+      box-shadow: 0 0 5px rgba(78, 78, 78, 0.5);
+      border: 2px solid #bdbdbd;
+    }
+  }
+}
+
+.listStyle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  p {
+    font-family: v.$font-family;
+  }
+
+  .fa-trash-can {
+    color: #727272;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: v.$primary-color;
+    }
+  }
+}
